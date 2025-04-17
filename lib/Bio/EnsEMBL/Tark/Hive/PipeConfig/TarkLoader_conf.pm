@@ -107,6 +107,15 @@ sub default_options {
 
 =cut
 
+sub resource_classes {
+    my ($self) = @_;
+    return {
+        'default' => { SLURM => '--partition=production --time=1-00:00:00 --mem=4000' },
+        'default_slurm' => { SLURM => '--partition=production --time=1-00:00:00 --mem=4000' },
+        'default_16GB'    => { SLURM => '--partition=production --time=1-00:00:00 --mem=16000' },
+    };
+}
+
 sub pipeline_analyses {
   my ($self) = @_;
 

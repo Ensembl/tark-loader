@@ -349,7 +349,7 @@ sub _load_gene {
   }
 
   my $gene_checksum = $utils->checksum_array(
-    @loc_pieces, $name_id, $gene->stable_id(), $gene->version()
+    @loc_pieces, $name_id, $gene->stable_id(), $gene->version(), $gene->biotype()
   );
 
   my $sth = $self->get_insert('gene');
@@ -445,7 +445,7 @@ sub _load_transcript {
   my $utils = Bio::EnsEMBL::Tark::Utils->new();
   my $loc_checksum = $utils->checksum_array( @loc_pieces_checksum );
   my $transcript_checksum = $utils->checksum_array(
-    $loc_checksum, $transcript->stable_id(), $transcript->version(),
+    $loc_checksum, $transcript->stable_id(), $transcript->version(), $transcript->biotype(),
     (
       $session_pkg->{exon_set_checksum} ? $session_pkg->{exon_set_checksum} : undef
     ), $seq_checksum

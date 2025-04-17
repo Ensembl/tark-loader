@@ -15,6 +15,7 @@ requires 'Proc::Daemon';
 requires 'SQL::Translator', '>= 0.11018';
 requires 'Text::CSV';
 requires 'Text::Glob';
+requires 'DateTime::Format::ISO8601';
 # requires 'URI::Escape';
 # requires 'XML::LibXML';
 # requires 'XML::Simple';
