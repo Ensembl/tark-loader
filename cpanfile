@@ -14,6 +14,7 @@ requires 'PerlIO::gzip';
 requires 'Proc::Daemon';
 requires 'SQL::Translator', '>= 0.11018';
 requires 'Text::CSV';
+requires 'DateTime::Format::ISO8601';
 requires 'Text::Glob';
 # requires 'URI::Escape';
 # requires 'XML::LibXML';
