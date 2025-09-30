@@ -349,7 +349,7 @@ sub _load_gene {
   }
 
   my $gene_checksum = $utils->checksum_array(
-    @loc_pieces, $name_id, $gene->stable_id(), $gene->version(), $gene->biotype()
+    $loc_checksum, $name_id, $gene->stable_id(), $gene->version(), $gene->biotype()
   );
 
   my $sth = $self->get_insert('gene');

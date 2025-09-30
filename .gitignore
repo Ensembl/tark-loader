@@ -5,6 +5,6 @@ Makefile
 Makefile.old
 MANIFEST.bak
 pm_to_blib
-local/
 .DS_Store
 *~
+local
